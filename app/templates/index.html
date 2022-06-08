@@ -1,0 +1,329 @@
+{% extends 'base.html' %}
+
+{% block top_content %}
+
+<div class="container">
+    <h4>Останні надходження:</h4>
+    <div class="slider owl-carousel">
+      <div class="card-slider">
+        <div class="card">
+          <a href="#"><img src="{{url_for("static", filename="img/black_widow.jpg")}}" class="card-img-slider" alt="..."></a>
+          <div class="card-body">
+            <a href="#" class="card-title h6 d-block text-dark">Чорна Вдова</a>
+            <p class="card-text text-muted">2022, США</p>
+              <div class="d-flex flex-row align-items-center">
+              </div>
+          </div>
+        </div>
+     </div>
+     <div class="card-slider">
+      <div class="card">
+        <a href="#"><img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-slider" alt="..."></a>
+        <div class="card-body">
+          <a href="#" class="card-title h6 mt-1 d-block text-dark">У руках пса</a>
+          <p class="card-text text-muted">2021, Англія</p>
+            <div class="d-flex flex-row align-items-center">
+            </div>
+        </div>
+      </div>
+   </div>
+   <div class="card-slider">
+    <div class="card">
+      <a href="#"><img src="{{url_for("static", filename="img/sonik.jpg")}}" class="card-img-slider" alt="..."></a>
+      <div class="card-body">
+        <a href="#" class="card-title h6 mt-1 d-block text-dark">Їжак Сонік</a>
+        <p class="card-text text-muted">2020, США Японія</p>
+          <div class="d-flex flex-row align-items-center">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-slider">
+      <div class="card">
+        <a href="#"><img src="{{url_for("static", filename="img/fe675d41de305ta10h91s.png")}}" class="card-img-slider" alt="..."></a>
+        <div class="card-body">
+          <a href="#" class="card-title h6 mt-1 d-block text-dark">Варяг</a>
+          <p class="card-text text-muted">2022, США</p>
+            <div class="d-flex flex-row align-items-center">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-slider">
+        <div class="card">
+          <a href="#"><img src="{{url_for("static", filename="img/oa19e4d34ae54ns23h18r.jpg")}}" class="card-img-slider" alt="..."></a>
+          <div class="card-body">
+            <a href="#" class="card-title h6 mt-1 d-block text-dark">Стоп земля</a>
+            <p class="card-text text-muted">2021, Україна</p>
+              <div class="d-flex flex-row align-items-center">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-slider">
+          <div class="card">
+            <a href="#"><img src="{{url_for("static", filename="img/w10fc0242e9f1br70j84b.jpg")}}" class="card-img-slider" alt="..."></a>
+            <div class="card-body">
+              <a href="#" class="card-title h6 mt-1 d-block text-dark">Вусатий Фанк</a>
+              <p class="card-text text-muted">2020, Україна</p>
+                <div class="d-flex flex-row align-items-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-slider">
+            <div class="card">
+              <a href="#"><img src="{{url_for("static", filename="img/j9c020996ada2ed90a30p.jpg")}}" class="card-img-slider" alt="..."></a>
+              <div class="card-body">
+                <a href="#" class="card-title h6 mt-1 d-block text-dark">Аеропорт</a>
+                <p class="card-text text-muted">2015, Україна</p>
+                  <div class="d-flex flex-row align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    <script>
+      $(".slider").owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, //2000ms = 2s;
+        autoplayHoverPause: true,
+        items: 7,
+        responsive: false,
+      });
+   </script>
+
+{% endblock %}
+
+{% block content%}
+
+<div class="items">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <img src="{{url_for("static", filename="img/the power of dog.jpg")}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h4 class="card-title">У руках пса</h4>
+              <h5 class="card-subtitle mb-2 text-muted">2021, США</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Драма, Вестерн</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>    
+            </div>
+         </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
