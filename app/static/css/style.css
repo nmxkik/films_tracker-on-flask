@@ -98,8 +98,18 @@
   height: 320px;
   margin: 2px;
 }
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card{
   width: 15rem;
+  display:flex;
+  align-items: center;
+  justify-items: center;
 }
 
 .card-img-slider{
@@ -110,11 +120,10 @@
   max-height: 190px;
 }
 
-.row{
-  justify-content: center!important;
-}
-.items {
-  margin-left: auto;
+.card {
+  display:flex;
+  align-items: center;
+  justify-items: center;
 }
 
 [data-pagination],
