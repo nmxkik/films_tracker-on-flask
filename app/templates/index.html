@@ -3,6 +3,7 @@
 {% block top_content %}
 
 <div class="container">
+  
     <h4>Останні надходження:</h4>
     <div class="slider owl-carousel">
       <div class="card-slider">
@@ -84,17 +85,8 @@
             </div>
         </div>
 
-    <script>
-      $(".slider").owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 2000, //2000ms = 2s;
-        autoplayHoverPause: true,
-        items: 7,
-        responsive: false,
-      });
-   </script>
 
+<br>
 {% endblock %}
 
 {% block content%}
@@ -325,5 +317,5 @@
       </div>
     </div>
   </div>
-
+  <script src="{{url_for("static",filename="js/script.js")}}"</script>
 {% endblock %}

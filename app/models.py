@@ -27,7 +27,7 @@ class Post(db.Model):
         
     def generate_slug(self):
         if self.title:
-            self.slug = slugify(self.title)
+            self.slug = str(self.id) + slugify(self.title)
             
     def __repr__(self) -> str:
         return "<post id: {}, title: {}>".format(self.id, self.title)
