@@ -14,7 +14,7 @@ def slugify(s):
     
 
 class Post(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(140))
     cardtitle = db.Column(db.String(140))
     img = db.Column(db.String(280))
@@ -40,7 +40,7 @@ class Post(db.Model):
     
     
 class Tag(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(100))
     slug = db.Column(db.String(100))
     
