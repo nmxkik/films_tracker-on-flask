@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block top_content %}
+
+{% endblock top_content %}
+
+
+{% block content %}
+<br>
+    <h1>Create new post</h1>
+<br>
+<container>
+  <div class="col-md-6 ml-5">
+    <form action="{{ url_for("create_post") }} form method="POST" enctype="multipart/form-data">
+      {% for field in form %}
+          <div class="form-group">
+              {{ field.label(class="control-label") }}
+              {{ field(class="form-control") }}
+          </div>
+      {% endfor %}
+      <button type="submit" class="btn brn-success">Create</button>
+    </form>
+  </div>
+</conteiner>
+
+
+{% endblock content %}

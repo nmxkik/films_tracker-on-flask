@@ -188,9 +188,11 @@
                   </div>
               </div>
           </div>
-            <form class="search">
+            <form class="search" method="GET">
               <div class="search__wrapper">
-                <input type="text" name="" placeholder="Пошук" class="search__field">
+
+                <input type="text" name="" placeholder="Пошук" class="search__field" name="query" value="{{ request.args.get("query", "") }}">
+                
                 <button type="submit" class="fa fa-search search__icon"></button>
               </div>
             </form>

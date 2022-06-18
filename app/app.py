@@ -5,7 +5,7 @@ from flask_script import Manager
 
 
 from config import Configuration
-from posts.blueprint import posts
+
 
 
 app = Flask(__name__, static_url_path='', static_folder='static', template_folder='templates')

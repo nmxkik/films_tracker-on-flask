@@ -1,5 +1,5 @@
 from app import db
-from sqlalchemy import Column, Integer
+from sqlalchemy import Column, ForeignKey, Integer
 from datetime import datetime
 import re
 
@@ -11,7 +11,13 @@ def slugify(s):
     while '--' in format_str:
         format_str = format_str.replace('--', '-')
     return format_str
-    
+
+
+post_tags = db.Table("post_tags", 
+                     db.Column("post_id", db.Integer, db.ForeignKey("post.id")),
+                     db.Column("tag_id", db.Integer, db.ForeignKey("tag.id"))
+                     )
+
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -30,10 +36,12 @@ class Post(db.Model):
     def __init__(self, *args, **kwargs):
         super(Post, self).__init__(*args, **kwargs)
         self.generate_slug()
-        
+
+    tags = db.relationship("Tag", secondary=post_tags, backref=db.backref("posts", lazy="dynamic"))
+
     def generate_slug(self):
         if self.title:
-            self.slug = str(self.id) + slugify(self.title)
+            self.slug = slugify(self.title)
             
     def __repr__(self):
         return "<post id: {}, title: {}>".format(self.id, self.title)
