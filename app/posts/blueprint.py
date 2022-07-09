@@ -11,7 +11,7 @@ from .forms import PostForm
 
 main_page = Blueprint("main", __name__, template_folder="templates")
 
-@app.route("/admin/create", methods=["POST", "GET"])
+@app.route("/admin/create", methods=['GET', 'POST'])
 def create_post():
     
     if request.method == "POST":
@@ -26,21 +26,22 @@ def create_post():
         description = request.form["description"]
         
         try:
-            post = Post(title=title, 
-                        cardtitle=cardtitle, 
-                        img=image, 
-                        country=country, 
-                        release_date=release_date, 
-                        genre=genre, 
-                        cast_actors=cast_actors, 
-                        rating=rating, 
-                        description=description
-                        )
+            post = Post(
+                title=title, 
+                cardtitle=cardtitle, 
+                img=image, 
+                country=country, 
+                release_date=release_date, 
+                genre=genre, 
+                cast_actors=cast_actors, 
+                rating=rating, 
+                description=description
+            )
             db.session.add(post)
             db.session.commit()
         except:
             print("Something wrong")
-        return redirect(render_template("main/index.html"))
+        return redirect( url_for("index"))
     else:
         form = PostForm()
         return render_template("admin/create_post.html", form=form)
