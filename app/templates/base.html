@@ -22,7 +22,6 @@
 
 
 <body>
-    <i>
       <div class="navbar navbar-expand-lg ">
         <div class="container-fluid">
           <a href="{{ url_for("index") }}" class="navbar-brand d-flex ml-4 align-items-center">
@@ -117,8 +116,8 @@
                 <div class="navbar-collapse justify-content-start mb-3">
                     
                     <div class="nav-item dropdown">
-                        <a href="{{ url_for("films") }}" class="nav-link" data-toggle="dropdown">
-                            <a href="{{ url_for("films") }}" class="navbar-brand ml-3">Фільми</a></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <a href="#" class="navbar-brand ml-3">Фільми</a></a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Комедії</a>
                             <a href="#" class="dropdown-item">Бойовики</a>
@@ -126,8 +125,8 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="{{ url_for("tvseries") }}" class="nav-link" data-toggle="dropdown">
-                            <a href="{{ url_for("tvseries") }}" class="navbar-brand ml-3">Серіали</a></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <a href="#" class="navbar-brand ml-3">Серіали</a></a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Комедії</a>
                             <a href="#" class="dropdown-item">Бойовики</a>
@@ -135,8 +134,8 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="{{ url_for("cartoons") }}" class="nav-link" data-toggle="dropdown">
-                            <a href="{{ url_for("cartoons") }}" class="navbar-brand ml-3">Мультфільми</a></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <a href="#" class="navbar-brand ml-3">Мультфільми</a></a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Комедії</a>
                             <a href="#" class="dropdown-item">Бойовики</a>
@@ -144,8 +143,8 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <a href="{{ url_for("anime") }}" class="nav-link" data-toggle="dropdown">
-                            <a href="{{ url_for("anime") }}" class="navbar-brand ml-3">Аніме</a></a>
+                        <a href="#" class="nav-link" data-toggle="dropdown">
+                            <a href="#" class="navbar-brand ml-3">Аніме</a></a>
                         <div class="dropdown-menu">
                             <a href="#" class="dropdown-item">Комедії</a>
                             <a href="#" class="dropdown-item">Бойовики</a>
@@ -165,7 +164,7 @@
           </div>
         </div>
       </div>
-    </i>
+
     <div class="navbarsecondary">
       <div class="d-block d-md-none">
         <div class="navbar navbar-header navbar-expand navbar-light bg-light ">
@@ -178,20 +177,18 @@
                   </button>
                   <div class="dropdown-menu">
                       <a class="dropdown-item" href="#">
-                        <a href="{{ url_for("films") }}" class="navbar-brand ml-3">Фільми</a>
+                        <a href="{{ url_for("index") }}" class="navbar-brand ml-3">Фільми</a>
                       <a class="dropdown-item" href="#">
-                        <a href="{{ url_for("tvseries") }}" class="navbar-brand ml-3">Серіали</a>
+                        <a href="#" class="navbar-brand ml-3">Серіали</a>
                       <a class="dropdown-item" href="#">
-                        <a href="{{ url_for("cartoons") }}" class="navbar-brand ml-3">Мультфільми</a>
+                        <a href="{{ url_for("index") }}" class="navbar-brand ml-3">Мультфільми</a>
                       <a class="dropdown-item" href="#">
-                        <a href="{{ url_for("anime") }}" class="navbar-brand ml-3">Аніме</a>
+                        <a href="{{ url_for("index") }}" class="navbar-brand ml-3">Аніме</a>
                   </div>
               </div>
           </div>
             <form class="search" method="GET">
-              <div class="search__wrapper">
-
-                <input type="text" name="" placeholder="Пошук" class="search__field" name="query" value="{{ request.args.get("query", "") }}">
+              <div class="search_#   <input type="text" name="" placeholder="Пошук" class="search__field" name="query" value="{{ request.args.get("query", "") }}">
                 
                 <button type="submit" class="fa fa-search search__icon"></button>
               </div>
@@ -205,32 +202,6 @@
 
 {% block content %}
 {% endblock %}
-
-<div class="pagination">
-  <div class="container mb-4 mt-4">
-    <nav data-pagination>
-      <a href=# disabled><i class=ion-chevron-left></i></a>
-      <ul>
-        <li class=current><a href=#1>1</a>
-        <li><a href=#2>2</a>
-        <li><a href=#3>3</a>
-        <li><a href=#4>4</a>
-        <li><a href=#5>5</a>
-        <li><a href=#6>6</a>
-        <li><a href=#7>7</a>
-        <li><a href=#8>8</a>
-        <li><a href=#9>9</a>
-        <li><a href=#10>…</a>
-        <li><a href=#41>41</a>
-      </ul>
-      <a href=#2><i class=ion-chevron-right></i></a>
-    </nav>
-  </div>
-</div>
-
-</div>
-
-
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

@@ -26,6 +26,7 @@ def create_post():
             )
             db.session.add(post)
             db.session.commit()
+        # trunk-ignore(flake8/E722)
         except:
             print("Something wrong")
         return redirect(url_for("index"))
@@ -37,9 +38,23 @@ def create_post():
 @app.route("/")
 def index():
     query = request.args.get("query")
+
+    page = request.args.get("page")
+
+    if page and page.isdigit():
+        page = int(page)
+    else:
+        page = 1
+
     if query:
         posts = Post.query.filter(Post.title.contains(query))
     else:
-        posts = Post.query.all()
+        #        posts = Post.query.all()
+        posts = Post.query.order_by(Post.rating.desc())
+        last_posts = Post.query.order_by(Post.created.desc())
 
-    return render_template("main/index.html", posts=posts)
+    pages = posts.paginate(page=page, per_page=1)
+
+    return render_template(
+        "main/index.html", last_posts=last_posts, pages=pages
+    )

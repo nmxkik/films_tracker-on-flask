@@ -8,7 +8,7 @@
     <div class="slider owl-carousel">
 
 
-    {% for post in posts %}
+    {% for post in last_posts %}
       <div class="card-slider">
         <div class="card">
           <a href="#"><img src="{{url_for('static', filename= post.img )}}" class="card-img-slider" alt="..."></a>
@@ -100,6 +100,25 @@
 <div class="items">
     <div class="container">
       <div class="row justify-content-center align-items-center">
+        
+        
+      {% for post in pages.items %}
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+          <div class="card">
+            <a href="#"><img src="{{url_for('static', filename= post.img )}}" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <h4 class="card-title">{{ post.cardtitle }}</h4>
+              <h5 class="card-subtitle mb-2 text-muted">{{ post.release_date }}, {{ post.country }}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ post.genre }}</h6>
+              <p class="card-text">{{ post.description }}</p>    
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+        
+        
+        
+        
         <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
           <div class="card">
             <img src="{{url_for('static', filename='img/the power of dog.jpg')}}" class="card-img-top" alt="...">
@@ -323,5 +342,58 @@
       </div>
     </div>
   </div>
+
+  <div class="pagination">
+    <div class="container mb-4 mt-4">
+      <nav data-pagination>
+        <ul>
+        <a href="./?page={{ pages.prev_num }}" disabled><i class=ion-chevron-left></i></a>
+        
+
+          {% for page in pages.iter_pages() %}
+
+            <li {% if page == pages.page %} class="current" {% endif %}
+
+              <a href="./?page={{ page }}"> {{ page }} <span class="sr-only">(current)</span></a>
+
+            </li>
+
+          {% endfor %}
+
+        
+        <a href="./?page={{ pages.next_num }}"><i class=ion-chevron-right></i></a>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
   <script src="{{url_for('static',filename="js/script.js")}}"</script>
+    
+{% endblock %}
+
+
+{% block paginator %}
+
+<div class="pagination">
+  <div class="container mb-4 mt-4">
+    <nav data-pagination>
+      <a href=# disabled><i class=ion-chevron-left></i></a>
+      <ul>
+        <li class=current><a href=#1>1</a>
+        <li><a href=#2>2</a>
+        <li><a href=#3>3</a>
+        <li><a href=#4>4</a>
+        <li><a href=#5>5</a>
+        <li><a href=#6>6</a>
+        <li><a href=#7>7</a>
+        <li><a href=#8>8</a>
+        <li><a href=#9>9</a>
+        <li><a href=#10>…</a>
+        <li><a href=#41>41</a>
+      </ul>
+      <a href=#2><i class=ion-chevron-right></i></a>
+    </nav>
+  </div>
+</div>
+
 {% endblock %}
