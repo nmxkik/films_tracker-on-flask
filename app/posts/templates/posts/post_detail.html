@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block top_content %}
+
+{% endblock top_content %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="fullstory-wrapper">
+        <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
+            <div class="card">
+              <a href="#"><img src="{{url_for('static', filename= post.img )}}" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h4 class="card-title">{{ post.cardtitle }}</h4>
+                <h5 class="card-subtitle mb-2 text-muted">{{ post.release_date }}, {{ post.country }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ post.genre }}</h6>
+                <p class="card-text">{{ post.description }}</p>    
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+{% endblock content %}

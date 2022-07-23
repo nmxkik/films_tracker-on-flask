@@ -29,7 +29,7 @@ class Post(db.Model):
     release_date = db.Column(db.String(140))
     genre = db.Column(db.String(140))
     cast_actors = db.Column(db.String(140))
-    rating = db.Column(db.Float, primary_key=True)
+    rating = db.Column(db.Float)
     description = db.Column(db.Text)
     created = db.Column(db.DateTime, default=datetime.now())
 

@@ -3,7 +3,7 @@ import re
 from wtforms import FloatField, Form, StringField, TextAreaField
 
 
-class PostForm(Form):
+class CreatePostForm(Form):
     title = StringField("title")
     cardtitle = StringField("cardtitle")
     image = StringField("image")  # FileField(validators=[FileRequired()])
