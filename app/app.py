@@ -1,9 +1,18 @@
-from flask import Flask
+from flask import Blueprint, Flask
 from flask_migrate import Migrate
 from flask_script import Manager
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import LoginManager
+
+
+from flask_wtf import CSRFProtect
+
 
 from config import Configuration
+
+
+main_page = Blueprint("main", __name__, template_folder="templates")
+
 
 
 app = Flask(
@@ -11,9 +20,24 @@ app = Flask(
 )
 app.config.from_object(Configuration)
 
+
+
 db = SQLAlchemy(app)
+
+csrf = CSRFProtect(app)
+csrf.init_app(app)
+
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.session_protection = 'basic'
+login_manager.login_view = 'account.login'
+
+
 
 
 migrate = Migrate(app, db, compare_type=True)
 manager = Manager(app)
+
+
 

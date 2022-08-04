@@ -60,3 +60,8 @@ class Tag(db.Model):
 
     def __repr__(self):
         return "<Tag id: {}, genre: {}>".format(self.id, self.name)
+
+
+
+
+

@@ -1,9 +1,9 @@
 from flask import Blueprint, redirect, render_template, request, url_for
-from models import Post
+from models.posts import Post
 
 from app import app, db
 
-from .forms import CreatePostForm
+from posts.forms import CreatePostForm
 
 main_page = Blueprint("main", __name__, template_folder="templates")
 
@@ -26,9 +26,9 @@ def create_post():
             )
             db.session.add(post)
             db.session.commit()
-        # trunk-ignore(flake8/E722)
-        except:
-            print("Something wrong")
+        except Exception as error:
+            print(error)
+            return redirect('/admin/create')
         return redirect(url_for("index"))
     else:
         form = CreatePostForm()
