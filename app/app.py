@@ -24,14 +24,10 @@ app.config.from_object(Configuration)
 
 db = SQLAlchemy(app)
 
-csrf = CSRFProtect(app)
-csrf.init_app(app)
+#csrf = CSRFProtect(app)
+#csrf.init_app(app)
 
 
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.session_protection = 'basic'
-login_manager.login_view = 'account.login'
 
 
 
