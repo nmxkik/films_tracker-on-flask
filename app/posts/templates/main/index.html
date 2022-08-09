@@ -11,9 +11,9 @@
     {% for post in last_posts %}
       <div class="card-slider">
         <div class="card">
-          <a href="#"><img src="{{url_for('static', filename= post.img )}}" class="card-img-slider" alt="..."></a>
+          <a href="{{ (request.path) + post.slug }}"><img src="{{url_for('static', filename= post.img )}}" class="card-img-slider" alt="..."></a>
           <div class="card-body">
-            <a href="#" class="card-title h6 d-block text-dark">{{ post.cardtitle }}</a>
+            <a href="{{ (request.path) + post.slug }}" class="card-title h6 d-block text-dark">{{ post.cardtitle }}</a>
             <p class="card-text text-muted">2022, США</p>
               <div class="d-flex flex-row align-items-center">
               </div>
@@ -105,7 +105,7 @@
       {% for post in pages.items %}
         <div class="col-lg-3 col-md-6 col-sm-6 col mb-4 mb-lg-0">
           <div class="card">
-            <a href="#"><img src="{{url_for('static', filename= post.img )}}" class="card-img-top" alt="..."></a>
+            <a href="{{ (request.path) + post.slug }}"><img src="{{url_for('static', filename= post.img )}}" class="card-img-top" alt="..."></a>
             <div class="card-body">
               <h4 class="card-title">{{ post.cardtitle }}</h4>
               <h5 class="card-subtitle mb-2 text-muted">{{ post.release_date }}, {{ post.country }}</h5>

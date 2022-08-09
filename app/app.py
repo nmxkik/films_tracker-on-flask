@@ -28,12 +28,5 @@ db = SQLAlchemy(app)
 #csrf.init_app(app)
 
 
-
-
-
-
 migrate = Migrate(app, db, compare_type=True)
 manager = Manager(app)
-
-
-
